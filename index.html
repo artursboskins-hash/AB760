@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AB760 — Saprotams auto problēmu palīgs</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #17191d;
+}
+
+.hero {
+    background: #111318;
+    color: white;
+    padding: 55px 20px 65px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 46px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin: 0 auto 18px;
+    max-width: 700px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #c8cbd1;
+    max-width: 650px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 25px;
+    background: white;
+    color: #111318;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.container {
+    width: 92%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 55px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.number {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.step h3 {
+    margin: 0 0 10px;
+}
+
+.step p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d7d9de;
+    border-radius: 9px;
+    font-size: 16px;
+    background: white;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.submit {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #111318;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.result {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #f0f2f5;
+    border-radius: 12px;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.footer {
+    background: #111318;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 40px 18px 50px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .steps {
+        grid-template-columns
