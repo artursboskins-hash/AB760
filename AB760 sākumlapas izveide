@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB760 — Auto problēmu palīgs</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f5f7;
+    color:#17191d;
+}
+
+.hero{
+    background:#111318;
+    color:white;
+    text-align:center;
+    padding:55px 20px 65px;
+}
+
+.logo{
+    font-size:48px;
+    font-weight:900;
+    letter-spacing:5px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:38px;
+    max-width:750px;
+    margin:0 auto 18px;
+    line-height:1.1;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#c9ccd2;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.button{
+    display:inline-block;
+    margin-top:30px;
+    padding:17px 28px;
+    background:white;
+    color:#111318;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.container{
+    width:92%;
+    max-width:950px;
+    margin:auto;
+}
+
+.section{
+    padding:55px 0;
+}
+
+.section h2{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:35px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 4px 20px rgba(0,0,0,.07);
+}
+
+.number{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.step h3{
+    margin-bottom:10px;
+}
+
+.step p{
+    color:#666;
+    line-height:1.5;
+}
+
+.form-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+label{
+    display:block;
+    margin:20px 0 8px;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d5d8dd;
+    border-radius:9px;
+    font-size:16px;
+    background:white;
+}
+
+textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.submit{
+    width:100%;
+    margin-top:25px;
+    padding:17px;
+    border:0;
+    border-radius:10px;
+    background:#111318;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.result{
+    display:none;
+    margin-top:25px;
+    padding:25px;
+    background:#eef0f3;
+    border-radius:12px;
+    line-height:1.6;
+}
+
+.footer{
+    background:#111318;
+    color:#aaa;
+    text-align:center;
+    padding:30px 20px;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+    .hero{padding:40px 18px 50px}
+    .logo{font-size:40px}
+    .hero h1{font-size:30px}
+    .hero p{font-size:16px}
+    .steps{grid-template-columns:1fr}
+    .section{padding:40px 0}
+    .form-box{padding:22px}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="logo">AB760</div>
+
+    <h1>Kas noticis ar tavu auto?</h1>
+
+    <p>
+        Vienkāršs veids, kā aprakstīt auto problēmu
+        un saprast, kas varētu būt noticis.
+    </p>
+
+    <a class="button" href="#problema">MANAM AUTO IR PROBLĒMA →</a>
+</section>
+
+<section class="section">
+<div class="container">
+
+    <h2>Kā tas darbojas?</h2>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="number">01</div>
+            <h3>Pastāsti, kas notiek</h3>
+            <p>
+                Apraksti problēmu saviem vārdiem.
+                Tev nav jāzina automašīnas detaļu nosaukumi.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="number">02</div>
+            <h3>AB760 analizē</h3>
+            <p>
+                Sistēma sakārto simptomus un meklē
+                iespējamos problēmas cēloņus.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="number">03</div>
+            <h3>Tu saproti, ko darīt</h3>
+            <p>
+                Saņem saprotamu skaidrojumu,
+                ko pārbaudīt tālāk.
+            </p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section class="section" id="problema">
+<div class="container">
+
+    <h2>Apraksti sava auto problēmu</h2>
+
+    <div class="form-box">
+
+        <label for="brand">Auto marka</label>
+        <input id="brand" type="text" placeholder="Piemēram, Audi">
+
+        <label for="model">Modelis</label>
+        <input id="model" type="text" placeholder="Piemēram, Q7">
+
+        <label for="problem">Kas notiek?</label>
+        <select id="problem">
+            <option value="">Izvēlies problēmu</option>
+            <option>Nevar iedarbināt</option>
+            <option>Noslāpst</option>
+            <option>Raustās</option>
+            <option>Deg brīdinājuma lampiņa</option>
+            <option>Ir dīvaina skaņa</option>
+            <option>Tek šķidrums</option>
+            <option>Nevar atvērt / aizvērt</option>
+            <option>Auto zaudē jaudu</option>
+            <option>Problēma ar elektrību</option>
+            <option>Cita problēma</option>
+        </select>
+
+        <label for="description">Apraksti problēmu</label>
+        <textarea id="description"
+        placeholder="Piemēram: no rīta iedarbojas, bet pēc dažām minūtēm noslāpst..."></textarea>
+
+        <button class="submit" onclick="analyze()">
+            ANALIZĒT PROBLĒMU
+        </button>
+
+        <div class="result" id="result">
+            <h3>AB760 saņēma informāciju</h3>
+
+            <p id="resultText"></p>
+
+            <p>
+                <strong>Nākamais solis:</strong><br>
+                Šobrīd šī ir AB760 pirmā versija.
+                Nākamajā sistēmas versijā šeit tiks parādīti
+                iespējamie cēloņi, riska līmenis un ieteicamās pārbaudes.
+            </p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<footer class="footer">
+    © 2026 AB760 — Auto problēmu palīgs
+</footer>
+
+<script>
+function analyze(){
+
+    const brand =
+        document.getElementById("brand").value.trim();
+
+    const model =
+        document.getElementById("model").value.trim();
+
+    const problem =
+        document.getElementById("problem").value;
+
+    const description =
+        document.getElementById("description").value.trim();
+
+    if(!brand || !model || !problem || !description){
+        alert("Lūdzu, aizpildi visus laukus.");
+        return;
+    }
+
+    document.getElementById("resultText").innerHTML =
+        "Auto: <strong>" + brand + " " + model +
+        "</strong><br>" +
+        "Problēma: <strong>" + problem +
+        "</strong><br><br>" +
+        "Tavs apraksts:<br>" +
+        description.replace(/\n/g,"<br>");
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result")
+        .scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
